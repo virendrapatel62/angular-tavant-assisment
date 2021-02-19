@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="text-center p-4 m-4">
+        <div *ngIf='!profile'>
+            <p class="display-4">You Have not Created Any Profile</p>
+            <a class="btn btn-dark " routerLink="/profile/create-profile">Create Profile</a>
+        </div>
+    </div>
+
+
+    <div *ngIf='profile'>
+        <div>
+            <div class="col-lg-3 text-center mx-auto">
+                <img src="{{profile.user.avatar}}" class="rounded-circle mx-auto d-block img-circle" alt="...">
+                <p class="display-6">{{profile.user.name}}</p>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="card col-5 mx-auto mt-3">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <b>Bio</b>
+                        </div>
+                        <p>{{profile.bio}}</p>
+                    </div>
+                </div>
+
+                <div class="card col-5 mx-auto mt-3">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <b>Status</b>
+                        </div>
+                        <p>{{profile.status}}</p>
+                    </div>
+                </div>
+                <div class="card col-5 mx-auto mt-3">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <b>Company</b>
+                        </div>
+                        <p>{{profile.company}}</p>
+                    </div>
+                </div>
+                <div class="card col-5 mx-auto mt-3">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <b>Location</b>
+                        </div>
+                        <p>{{profile.location}}</p>
+                    </div>
+                </div>
+                <div class="card col-5 mx-auto mt-3">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <b>website</b>
+                        </div>
+                        <p>{{profile.website}}</p>
+                    </div>
+                </div>
+                <div class="card col-5 mx-auto mt-3">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <b>Skills</b>
+                        </div>
+                        <p *ngFor='let skill of profile.skills'>✅ &nbsp;&nbsp; {{skill}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

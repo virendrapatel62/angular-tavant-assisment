@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="col-lg-5 mx-auto">
+        <div class=" rounded shadow shdaow-sm p-4 m-4">
+            <form (ngSubmit)='createProfile()'>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Company</label>
+                    <input type="text" name='company' required class="form-control" [(ngModel)]='formData.company'>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Bio</label>
+                    <input type="text" name='bio' required class="form-control" [(ngModel)]='formData.bio'>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Job Post Name (status)</label>
+                    <input type="text" name='status' required class="form-control" [(ngModel)]='formData.status'>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Github User name</label>
+                    <input type="text" name='githubusername' required class="form-control"
+                        [(ngModel)]='formData.githubusername'>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Location</label>
+                    <input type="text" name='location' required class="form-control" [(ngModel)]='formData.location'>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Website</label>
+                    <input type="text" name='website' required class="form-control" [(ngModel)]='formData.website'>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Skills <small class="text-muted">Comma sep
+                            values</small></label>
+                    <input type="text" name='skills' required class="form-control" [(ngModel)]='formData.skills'>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="col-lg-5 mx-auto">
+        <div class=" rounded shadow shdaow-sm p-4 m-4">
+            <form (ngSubmit)='login()'>
+                <div *ngIf='errorMessages.length>0'>
+                    <p class="alert alert-danger" *ngFor='let err of errorMessages'>
+                        {{err.msg}}
+                    </p>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" name='email' required class="form-control" [(ngModel)]='formData.email'>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" name='password' required class="form-control"
+                        [(ngModel)]='formData.password'>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
